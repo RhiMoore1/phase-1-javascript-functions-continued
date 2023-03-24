@@ -12,9 +12,19 @@ mondayWork();
 
 
 function wrapAdjective(stringName = "*") {
+    return function (value = 'special') {
+        return `You are ${stringName}${value}${stringName}!`;
+    }
+}
+wrapAdjective("@")("Happy!");    
+
+
+/*
+function wrapAdjective(stringName = "*") {
     const innerFunction = function (value = 'special') {
         return `You are ${stringName}${value}${stringName}!`;
     }
     return innerFunction;
 }
-wrapAdjective()();
+wrapAdjective("@")("Happy!");
+*/
